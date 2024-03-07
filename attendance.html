@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+    		font-family: Arial, sans-serif;
+   	 	padding: 20px;
+    		position: relative; /* Add this line */
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+            justify-content: center;
+            height: 100vh;
+	}
+    li{
+        background-color: #45453b;
+    }
+
+	button {
+        background-color: #45453b;
+            	color: white; /* Change the button text color to white for better visibility */
+            	border: none; /* Remove the button border */    		
+		display: inline-block; /* Change this line */
+    		margin: 20px 10px; /* Change this line */
+    		padding: 20px; /* Make the buttons bigger */
+    		font-size: 20px; /* Make the buttons bigger */
+	}
+	#button3, #button4 {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 30px; /* Increase the padding to make the buttons larger */
+            font-size: 30px; /* Increase the font size to make the text larger */
+            width: 200px; /* Increase the width to make the buttons larger in length */
+            color: white;
+            border: none;
+	    height:200px;
+        }
+	
+
+	/* Add styles for the button container */
+	#buttonContainer {
+    		display: flex;
+    		justify-content: center;
+	}
+
+	/* Style for the special button */
+	#specialButton {
+    		position: absolute;
+    		top: 0;
+    		right: 0;
+    		border: none;
+    		margin: 0;
+    		padding: 10px;
+	}
+	/* Add styles for the display button */
+        #displayButton {
+            display: block;
+            margin: 20px 0;
+            padding: 20px; /* Make the button bigger */
+            font-size: 20px; /* Make the button bigger */
+        }
+        /* Add styles for the special button */
+        #specialButton {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            margin: 0;
+            padding: 10px;
+        }
+        /* Add styles for the other buttons */
+        #button1, #button3, #button4 {
+            display: inline-block; /* Change this line */
+            margin: 20px 10px; /* Change this line */
+            padding: 20px; /* Make the buttons bigger */
+            font-size: 20px; /* Make the buttons bigger */
+        }
+        /* CSS for the scrolling list */
+        #scrollingList {
+            height: 320px; /* Adjust this value to fit five items */
+            width: 600px;
+            overflow: auto;
+            margin-bottom: 20px;
+        }
+        #scrollingList ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        #scrollingList li {
+            font-size: 38px; /* Make the list text bigger */
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        /* Add styles for the button container */
+        #buttonContainer {
+            display: flex;
+            justify-content: center;
+        }
+        /* Add styles for the second button container */
+        #buttonContainer2 {
+            display: flex;
+            justify-content: center;
+        }
+	#myList li.selected {
+            background-color: #ccc; /* Change the background color */
+            color: black; /* Change the text color to black */
+            font-weight: bold; /* Make the text bold */
+        }
+
+        /* Add styles for the non-selected list items */
+        #myList li:not(.selected) {
+            color: white; /* Change the text color to white */
+        }
+    </style>
+</head>
+<body>
+
+<div id="scrollingList">
+    <ul id="myList">
+        <!-- Add as many list items as you want -->
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <!-- ... -->
+    </ul>
+</div>
+
+<!-- Add a container for the buttons -->
+<div id="buttonContainer">
+    <button type="button" id="button1">Detailed View</button>
+    <!-- Button 2 has been replaced with the display button -->
+    <button type="button" id="displayButton">Property</button>
+</div>
+
+<!-- Add a second container for the buttons -->
+<div id="buttonContainer2">
+    <button type="button" id="button3">Present</button>
+    <button type="button" id="button4">Absent</button>
+</div>
+
+<!-- Add the special button -->
+<button type="button" id="specialButton">Share as PDF</button>
+
+<script>
+    var list = document.getElementById('myList');
+    var items = list.getElementsByTagName('li');
+    var selectedIndex = 0;
+
+    // Select the first item initially
+    items[selectedIndex].classList.add('selected');
+
+    // Display the property of the selected item
+    document.getElementById('displayButton').textContent = 'Selected item: ' + 	items[selectedIndex].textContent;
+
+        document.getElementById('button3').onclick = document.getElementById('button4').onclick = function() {
+            
+		// Deselect the current item
+		items[selectedIndex].classList.remove('selected');
+
+            // Select the next item
+            selectedIndex = (selectedIndex + 1) % items.length;
+            items[selectedIndex].classList.add('selected');
+
+            // Scroll the list if the selected item is below the 3rd item
+            if (selectedIndex > 0) {
+                items[selectedIndex - 1].scrollIntoView({ behavior: 'smooth' });
+            }
+
+        // Update the display button text
+        document.getElementById('displayButton').textContent = 'Selected item: ' + items[selectedIndex].textContent;
+    };
+</script>
+
+</body>
+</html>
