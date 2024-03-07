@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header { /*for the navigation bar at the top*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #45453b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
+  
+li a { /*for the anchor tags in the navigation bar*/
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float:  left;
+    
+}
+a:hover{
+    background-color: black;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid #45453b;
+}
+
+input[type=button], input[type=submit] {
+    background-color: #45453b;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+form{
+    margin-top: 100px;
+}
+.aligned{
+    display: flex;
+    align-items:center;
+    margin: auto;
+    width: 50%;
+    margin-top: 200px;
+}
+.buttons{
+    list-style-type: none;
+    display: block;
+    width: 100px;
+    padding: 14px 16px;
+    margin: 25px;
+    text-align: center;
+}
+.libutton{
+    width: 200px;
+    margin: 10px;
+    background-color: #45453b;
+}
+    </style>
+</head>
+<body>
+    <ul class="header">
+        <li><a class="horizontal" href="">option 1</a></li>
+        <li><a class="horizontal" href="">option 2</a></li>
+        <li><a class="horizontal" href="">option3</a></li>
+        <li><a class="horizontal" href="">option4</a></li>
+    </ul>
+    <div class="aligned">
+        <img src = "logo.png">
+        <ul class="buttons">
+            <li>
+                <a class="libutton" href = "createaclass.html">Create a Class</a>
+            </li>
+            <li>
+                <a class="libutton" href = "joinclass.html">Join a Class</a>
+            </li>
+            <li>
+                <a class="libutton" href = "">My Classes</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
