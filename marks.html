@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Bootstrap Navbar Button Right</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <style>
+    .navbar {
+    background: #fff;
+    background-color: #45453b;
+    box-shadow: 0 4px 6px rgba(22, 22, 26, 0.18);
+  }
+  .navbar .navbar-nav .nav-link {
+    color: #000;
+  }
+  .btn-outline-dark {
+    border-radius: 0;
+  }
+  .btn-outline-dark:focus {
+    box-shadow: none;
+  }
+  @media screen and (max-width: 768px) {
+    .btn-outline-dark {
+      border: none;
+      padding: 0;
+      outline: none;
+    }
+  
+    .btn-outline-dark:hover {
+      background: none;
+      color: gray;
+    }
+  }
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#" style="color: white;">Trackurlearning</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Link</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-dark fw-bold" type="submit">Contact Us</button>
+    </div>
+  </div>
+</nav>
+<h4 style="margin: 5% 0 0 5%;">Overview</h4>
+<h2 style="margin: 1% 0 0 5%;">Mid-Sem 1</h2>
+<span style="margin: 1% 0 0 5%; font-size: 20px;">Nit Kurukshetra</span>
+<br>
+<span style="margin: 0 0 0 100px; font-size: 18px;" ><a href="">Edit</a></span>
+
+<table class="table table-striped" style="width: 90%; margin: 5%;">
+  <thead>
+    <tr>
+      <th scope="col">Roll no.</th>
+      <th scope="col">Exam</th>
+      <th scope="col">Subject Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Maximum Marks</th>
+      <th scope="col">Obtained</th>
+      <th scope="col">option</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    
+  </tbody>
+</table>
+
+<script>
+  // Function to generate a random integer between min and max (inclusive)
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Loop to generate table rows for roll numbers ranging from 123105000 to 123105150
+for (let rollNumber = 123105000; rollNumber <= 123105150; rollNumber++) {
+  // Generating random marks between 1 and 6
+  const mathMarks = getRandomInt(1, 6);
+  
+  // Creating the table row
+  const tableRow = `
+    <tr> 
+      <th scope="row">${rollNumber}</th>
+      <td>Mid-sem 1</td>
+      <td>Mathematics</td>
+      <td>19-Jan-1977</td>
+      <td>20</td>
+      <td>${mathMarks}</td>
+      <td><button type="button" class="btn btn-primary">Edit</button></td>
+    </tr>
+  `;
+  
+  // Appending the table row to the table body
+  document.querySelector('table tbody').innerHTML += tableRow;
+}
+
+</script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js'></script>
+</body>
+</html>

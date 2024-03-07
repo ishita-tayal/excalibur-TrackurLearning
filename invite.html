@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage3</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #454545;
+        }
+
+        .bar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #454545;
+            color: white;
+            height: 100pxpx;
+            width: 100%;
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        
+        }
+
+        select{
+            padding: 10px;
+            padding-left: 68px;
+            padding-right: 68px;
+        }
+
+        button{
+            padding: 10px;
+            padding-left: 65px;
+            padding-right: 65px;
+        }
+
+        .opt3{
+            padding-left: 73px;
+            padding-right: 73px;
+        }
+
+        .opt4{
+            padding-left: 68px;
+            padding-right: 68px;
+        }
+
+        .option{
+            height: 50px;
+        }
+
+        h1{
+            text-align: center;
+            position: relative;
+            top: 150px;  
+            font-size: 50px;
+            color: #454545;
+        }
+        img{
+            height: 75px;
+            width: 75px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div><img src="./laptop.jpg"/></div>
+        <div><button>Invite</button></div>
+    </div>
+
+    <h1>TrackurLearning</h1>
+
+    <div class="main">
+        <div class="option"><select class="opt1">
+            <option>None</option>
+            <option>Closed</option>
+            <option>Open</option>
+            <option>Restricted</option>
+        </select></div>
+
+        <div class="option"><button class="opt2"><a href="">Set Schedules</a></button></div>
+
+        <div class="option"><button class="opt3"><a href="attendance.html">Attendance</a></button></div>
+
+        <div class="option"><button class="opt4"><a href="marks.html">Marks/Result</a></button></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            background-color: #45453b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        p{
+            text-align: center;
+            color: #45453b;
+        }
+
+        .container-fluid{
+            position: absolute;
+            top: 0;
+            height: 65px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid" style="background-color: #45453b;">
+
+
+            <!-- Three Line Menu Button -->
+          <button  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+             <!-- Menu Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Menu Item 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Menu Item 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Menu Item 3</a>
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- Home Button -->
+          <a class="navbar-brand" href="#" style="color: white;">Home</a>
+      
+          
+      
+         
+          
+      
+          <!-- Login Button -->
+          <div class="d-flex">
+            <button class="btn btn-light me-2">Login</button>
+          </div>
+        </div>
+      </nav>
+      
+
+
+
+    <div class="container">
+        <h2>Class Login:</h2>
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="className">Class Name:</label>
+                <input type="text" id="className" name="className" placeholder="Enter class name">
+            </div>
+            <div class="form-group">
+                <label for="teacher">Teacher:</label>
+                <input type="text" id="teacher" name="teacher" placeholder="Enter teacher's name">
+            </div>
+            <div class="form-group">
+                <label for="organization">Organization:</label>
+                <input type="text" id="organization" name="organization" placeholder="Enter organization">
+            </div>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <p>Student Need Not to fill all the Details</p>
+</body>
+</html>
